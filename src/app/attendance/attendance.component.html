@@ -1,0 +1,44 @@
+<div class="table-responsive">
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th class="NoNewline">序号</th>
+      <th class="NoNewline">姓名</th>
+      <th>English Name</th>
+      <th class="NoNewline">劳动合同起日</th>
+      <th>年假 
+        (all annual leave)
+      </th>
+      <th>已使用的年假
+        (use annual leave)
+      </th>
+      <th>剩余年假
+        (unused annual leave)
+      </th>
+      <th>病假
+        (all sick leave)
+      </th>
+      <th>已使用的病假
+        (used sick leave)
+      </th>
+      <th>剩余病假
+        (unused sick leave)
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let attendance of attendances ">
+      <th class="NoNewline" scope="row">{{attendance.id}}</th>
+      <th class="NoNewline">{{attendance.name}}</th>
+      <th class="NoNewline">{{attendance.englishName}}</th>
+      <th>{{attendance.compact}}</th>
+      <th>{{attendance.allAnnualLeave}}</th>
+      <th>{{attendance.usedAnnualLeave}}</th>
+      <th>{{attendance.unusedAnnualLeave}}</th>
+      <th>{{attendance.allSickLeave}}</th>
+      <th>{{attendance.usedSickLeave}}</th>
+      <th>{{attendance.unusedSickLeave}}</th>
+    </tr>
+  </tbody>
+</table>
+</div>
